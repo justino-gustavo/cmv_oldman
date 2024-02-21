@@ -1,0 +1,4 @@
+schema: 
+  - 'src/graphql/schema.gql'
+  - 'src/graphql/schemas/*.gql'
+documents: 'src/graphql/schemas/*.gql'

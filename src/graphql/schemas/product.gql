@@ -1,0 +1,19 @@
+interface ProductComponent {
+	id: ID!
+	name: String!
+	description: [String!]!
+}
+
+type Product implements ProductComponent {
+	id: ID!
+	name: String!
+	description: [String!]!
+	use: [ProductUses]!
+	usedIn: [ProductUses]!
+}
+
+type ProductUses implements ProductComponent {
+	id: ID!
+	name: String!
+	description: [String!]!
+}

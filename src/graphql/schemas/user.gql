@@ -1,0 +1,16 @@
+interface UserComponent {
+	id: ID!
+	createdAt: Date!
+	updatedAt: Date!
+	name: String!
+}
+
+type User implements UserComponent {
+	id: ID!
+	createdAt: Date!
+	updatedAt: Date!
+	name: String!
+	email: String
+	phone: String
+	role: String!
+}
