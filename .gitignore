@@ -2,3 +2,4 @@ node_modules/
 .vscode/
 prisma/migrations/
 .env
+prisma/seed.js

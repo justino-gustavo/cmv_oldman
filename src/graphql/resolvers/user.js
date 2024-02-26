@@ -1,6 +1,6 @@
-import { prisma } from "../../database";
+import { user } from "../../database/controllers/user";
 
 export default {
-	user: ({ id }) => prisma.user.findUnique({ where: { id: Number(id) } }),
-	users: ({ take = 15, skip = 0 }) => prisma.user.findMany({ take, skip }),
+	user: user.getById,
+	users: user.getAll,
 };

@@ -13,4 +13,5 @@ type User implements UserComponent {
 	email: String
 	phone: String
 	role: String!
+	place: String
 }

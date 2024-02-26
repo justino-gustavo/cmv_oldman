@@ -10,6 +10,7 @@ type Product implements ProductComponent {
 	description: [String!]!
 	use: [ProductUses]!
 	usedIn: [ProductUses]!
+	author: User
 }
 
 type ProductUses implements ProductComponent {

@@ -1,11 +1,6 @@
-import { prisma } from "../../database";
+import { product } from "../../database/controllers/product";
 
 export default {
-	product: ({ id }) => prisma.product.findUnique({ where: { id: Number(id) } }),
-	products: async ({ take = 15, skip = 0 }) =>
-		await prisma.product.findMany({
-			take,
-			skip,
-			include: { use: true, usedIn: true },
-		}),
+	product: product.getById,
+	products: product.getAll,
 };

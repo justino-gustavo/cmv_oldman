@@ -4,19 +4,22 @@
   "description": "Backend CMV",
   "author": "Gustavo Justino",
   "main": "src/index.js",
+  "prisma": {
+    "seed": "bun prisma/seed.js"
+  },
   "scripts": {
     "dev": "bun --hot src/index.js",
-    "dist": "bun build src/index.js --outdir=dist --minify",
+    "dist": "bun build src/index.js --outdir=dist --target=bun --minify",
     "predist": "bun install -p"
   },
   "dependencies": {
     "@hono/graphql-server": "^0.4.3",
-    "@prisma/client": "5.9.1",
+    "@prisma/client": "^5.10.2",
     "graphql": "^16.8.1",
     "graphql-config": "^5.0.3",
     "hono": "^4.0.5"
   },
   "devDependencies": {
-    "prisma": "^5.10.1"
+    "prisma": "^5.10.2"
   }
 }
