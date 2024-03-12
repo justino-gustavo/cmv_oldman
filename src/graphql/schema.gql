@@ -1,8 +1,10 @@
 scalar Date
 
 type Query {
-	user(id: ID!): User
-	users(take: Int, skip: Int): [User]!
-	product(id: ID!): Product
-	products(take: Int, skip: Int): [Product]!
+  user(id: ID!): User
+  users(take: Int, skip: Int): [User]!
+  product(id: ID!): Product
+  products(take: Int, skip: Int): [Product]!
+  person(id: ID!): Person
+  people(take: Int, skip: Int): [Person]!
 }

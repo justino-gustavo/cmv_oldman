@@ -20,7 +20,7 @@ model User {
   password  String
   role      Role      @default(USER)
   place     Place
-  products   Product[]
+  products  Product[]
 
   @@index([id])
 }
@@ -41,13 +41,37 @@ enum Place {
 model Product {
   id          Int       @id @default(autoincrement())
   name        String
-  description String[]
+  description String
+  tags        Tag[]
   use         Product[] @relation("productUses")
   usedIn      Product[] @relation("productUses")
   userId      Int
   author      User      @relation(fields: [userId], references: [id], onDelete: Restrict)
+  validity    Int?
+  batch       String?
+  waste       Waste[]
+  cost        Float
+  price       Float
 
   @@index([userId])
+}
+
+model Tag {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  priority Int
+  products Product[]
+}
+
+model Waste {
+  id           Int      @id @default(autoincrement())
+  registeredAt DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  productId    Int
+  product      Product  @relation(fields: [productId], references: [id])
+  amount       Int
+
+  @@index([productId])
 }
 
 model Person {

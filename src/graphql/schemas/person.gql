@@ -1,0 +1,8 @@
+type Person implements UserComponent {
+  id: ID!
+  createdAt: Date!
+  updatedAt: Date!
+  name: String!
+  email: String
+  phone: String
+}

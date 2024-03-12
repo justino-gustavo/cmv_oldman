@@ -8,7 +8,7 @@
     "seed": "bun prisma/seed.js"
   },
   "scripts": {
-    "dev": "bun --hot src/index.js",
+    "dev": "bun --hot --watch src/index.js",
     "dist": "bun build src/index.js --outdir=dist --target=bun --minify",
     "predist": "bun install -p"
   },
