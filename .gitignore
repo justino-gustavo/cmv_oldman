@@ -1,5 +1,10 @@
-node_modules/
-.vscode/
-prisma/migrations/
+/.vscode
+/node_modules
+/build
+/package
+/prisma/migrations
+/prisma/seed.js
+.DS_Store
 .env
-prisma/seed.js
+.env.*
+!.env.example
